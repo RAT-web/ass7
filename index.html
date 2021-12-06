@@ -11,18 +11,23 @@ Date:4/12/2020
 	</head>
 	<body style="font-size:50px">
 		<script language="javascript" text="text/javascript">
-			var s1=prompt("Enter a lowercase string:");
-			document.write("lowercase string:"+s1);
+			var s1=prompt("Enter a string:");
+			document.write("original string:"+s1);
 			document.write("<br>");
-			var res=s1.toUpperCase();
-			document.write("convert string lower to upper:"+res);
-			document.write("<br>");
-			var s2=prompt("Enter a uppercase string:");
-			document.write("uppercase string:"+s2);
-			document.write("<br>");
-			var res1=s2.toLowerCase();
-			document.write("convert string upper to lower:"+res1);
-			
+			var res="";
+			for(var i=0;i<s1.length;i++)
+			{
+				if(s1[i]>='a'&&s1[i]<='z')
+				{
+					res+=s1[i].toUpperCase();
+				}
+				else if(s1[i]>='A'&&s1[i]<='Z')
+				{
+					res+=s1[i].toLowerCase();
+				}
+				
+			}
+			document.write("After changing string:"+res);
 		</script>
 	</body>
 </html>
